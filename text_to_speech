@@ -1,0 +1,18 @@
+import pyttsx3
+
+def text_to_speech(text):
+    # Initialize the TTS engine
+    engine = pyttsx3.init()
+    
+    # Optional: Set properties like speech rate, volume, and voice
+    engine.setProperty('rate', 150)  # Speed of speech (default: 200)
+    engine.setProperty('volume', 1.0)  # Volume (0.0 to 1.0)
+    
+    # Speak the given text
+    engine.say(text)
+    engine.runAndWait()
+
+# Example usage
+if __name__ == "__main__":
+    input_text = "Hello, welcome to the world of Python programming!"
+    text_to_speech(input_text)
